@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'drf_yasg',
     'tweets'
 ]
 
@@ -122,6 +123,8 @@ REST_FRAMEWORK = {
     'rest_framework.pagination.PageNumberPagination',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     )
 }
 
@@ -131,3 +134,6 @@ REST_FRAMEWORK = {
 STATIC_URL = '/static/'
 
 APPEND_SLASH = False
+
+LOGIN_URL = 'rest_framework:login'
+LOGOUT_URL = 'rest_framework:logout'

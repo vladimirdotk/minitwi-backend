@@ -5,3 +5,6 @@
 
 ### Start development server
 + `docker-compose up -d`
+
+### Swagger
++ `http://localhost:8000/swagger`
